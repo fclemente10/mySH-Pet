@@ -1,14 +1,18 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+    <ion-card-title text-center color="light" style="font-size: 40px"> mySH Pet</ion-card-title>
+    <ion-buttons right>
+      <img side="right" end src="../../assets/imgs/logo_02.png" width="60px" height="85px"/>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
+<ion-content padding class="getstart">
+  <ion-grid style="background-color: transparent">
+    <ion-item style="background-color: transparent"> <h2> ¡Hola, {{correoElectronico}}!</h2></ion-item>
+    <ion-item style="background-color: transparent">
+      <button *ngIf="!enchufado" ion-button color="secondary" (click)="btnOn()" full>Enchufar</button>
+      <button *ngIf="enchufado" ion-button color="danger" (click)="btnOff()" full>Quitar</button>
+    </ion-item>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v3">docs</a> will be your guide.
-  </p>
+  </ion-grid>
 </ion-content>
